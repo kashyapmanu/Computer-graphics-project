@@ -2,7 +2,7 @@
  Computer graphics project using OpenGL
 
 This the the mini project for the class of Computer Graphics of VII semester of NMAMIT.
-Please find the reference projects in the reference folder.
+Please find the reference projects in the reference folder : https://github.com/kashyapmanu/CG-PROJECT/tree/main/Reference%20Projects
 <hr>
 Tech used:
  

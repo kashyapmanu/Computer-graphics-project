@@ -24,7 +24,10 @@ Resources for Report
 NMAMIT LOGO : 
 ![NMAMIT LOGO](https://www.nmamit.nitte.edu.in/img/nitte-mobile-logo.png)
 
+
+
 CodeBlocks Logo :
+
 ![Code Blocks logo](https://lh3.googleusercontent.com/proxy/Cn-DtYCqy1LSgU-4-EjedxWrPUEI9WCPpMJ0wphe3WOGpB9-qkjvdD8qysApqhhi_JPN2Ji9DwIBr2At7oTK4EmeXtY)
 
 OpenGl Logo:

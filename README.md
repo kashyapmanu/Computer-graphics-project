@@ -21,7 +21,8 @@ Installing OpenGL on ubuntu and running it through code blocks:
 <hr>
 Resources for Report
 
-NMAMIT LOGO : 
+NMAMIT LOGO :
+
 ![NMAMIT LOGO](https://www.nmamit.nitte.edu.in/img/nitte-mobile-logo.png)
 
 

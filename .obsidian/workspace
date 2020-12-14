@@ -67,6 +67,7 @@
             "id": "0583c374401b1a73",
             "type": "leaf",
             "state": {
+              "type": "backlink",
               "state": {
                 "file": "README.md",
                 "collapseAll": false,

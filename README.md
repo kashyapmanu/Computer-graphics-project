@@ -52,17 +52,24 @@ Screen Shots
 
 ![enter image description here](./images/introPage.png)
 <hr>
+
 ![enter image description here](./images/instructionPage.png)
 <hr>
+
 ![enter image description here](./images/scene.png)
 <hr>
+
 ![enter image description here](./images/bench.png)
 <hr>
+
 ![enter image description here](./images/slide.png)
 <hr>
+
 ![enter image description here](./images/swing.png)
 <hr>
+
 ![enter image description here](./images/weel.png)
 <hr>
+
 ![enter image description here](./images/glider.png)
 <hr>

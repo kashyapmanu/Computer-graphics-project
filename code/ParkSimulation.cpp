@@ -217,10 +217,13 @@ void path()
 
 void person()
 {
-    glScalef(0.05, 0.05, 0);
-   
-    glPushMatrix(); //  top
-    glColor3f(1, 0.27, 0);
+    glPushMatrix();
+
+    glTranslated(-7 + i ,-0.5,0);
+    glScalef(0.04, 0.06, 0);
+    
+    glPushMatrix(); 
+    glColor3f(1, 0, 0);
     glBegin(GL_POLYGON);
     glVertex2d(-6, -6);
     glVertex2d(-11, -9);
@@ -238,7 +241,7 @@ void person()
     glPopMatrix();
 
     glPushMatrix(); //left hand
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     glBegin(GL_QUADS);
     glVertex2d(-11, -9);
     glVertex2d(-9, -13);
@@ -250,12 +253,12 @@ void person()
 
     glPushMatrix(); //left hand palm
     glTranslated(-15, -20, 0);
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     circle(3, 2.5);
     glPopMatrix();
 
     glPushMatrix(); //right hand
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     glBegin(GL_QUADS);
     glVertex2d(11, -9);
     glVertex2d(9, -13);
@@ -266,23 +269,22 @@ void person()
 
     glPushMatrix(); //right hand palm
     glTranslated(15, -20, 0);
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     circle(3, 2.5);
     glPopMatrix();
 
     glPushMatrix(); //skirt
-    glColor3f(0.6, 0.196, 0.8);
+    glColor3f(0, 0, 1);
     glBegin(GL_QUADS);
     glVertex2d(-6, -22);
     glVertex2d(6, -22);
-    glVertex2d(4, -32);
-    glVertex2d(-16, -30);
+    glVertex2d(13, -32);
+    glVertex2d(-13, -32);
     glEnd();
     glPopMatrix();
 
     glPushMatrix(); //left leg
-    glTranslated(-6, 1.5, 0);
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     glBegin(GL_QUADS);
     glVertex2d(-6, -32);
     glVertex2d(-2, -32);
@@ -292,8 +294,7 @@ void person()
     glPopMatrix();
 
     glPushMatrix(); //right leg
-    glTranslated(-5, 0.8, 0);
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     glBegin(GL_QUADS);
     glVertex2d(6, -32);
     glVertex2d(2, -32);
@@ -303,18 +304,16 @@ void person()
     glPopMatrix();
 
     glPushMatrix(); //right shoe
-    glTranslated(-5, 0.8, 0);
     glColor3f(0, 0, 0);
     glBegin(GL_QUADS);
-    glVertex2d(6, -42);
-    glVertex2d(-2, -42);
+    glVertex2d(10, -42);
+    glVertex2d(2, -42);
     glVertex2d(2, -38);
     glVertex2d(6, -38);
     glEnd();
     glPopMatrix();
 
     glPushMatrix(); //left shoe
-    glTranslated(-6, 1.5, 0);
     glColor3f(0, 0, 0);
     glBegin(GL_QUADS);
     glVertex2d(-10, -42);
@@ -330,7 +329,7 @@ void person()
     glPopMatrix();
 
     glPushMatrix(); //head, neck, nose ,eye, lips
-    glColor3f(1, 0.94, 0.83);
+    glColor3f(0.87, 0.72, 0.53);
     circle(7, 6);      //head
     glBegin(GL_QUADS); //neck
     glVertex2d(-6, -6);
@@ -366,6 +365,7 @@ void person()
     glPopMatrix();
 
     glPopMatrix();
+    
     glPopMatrix();
 }
 
@@ -1247,21 +1247,18 @@ void baby()
     glPushMatrix();
     if (isbaby == 0)
     {
-        // printf("%f\n",by);
-        glTranslated(0 + bx, 0 + by, 0);
-        glScalef(0.05, 0.07, 0);
+        glTranslated(0 + bx, -1 + by, 0);
+        glScalef(0.04, 0.06, 0);
     }
 
     else if (isbaby == 5)
     {
         glTranslated(-0.5, 2, 0);
-        //glTranslated(0+bx,0+by,0);
         glScaled(0.07, 0.2, 0);
     }
     else if (isbaby == 6)
     {
         glTranslated(0 + bx, 0 + by, 0);
-        //printf("HI");
         glScalef(0.04, 0.06, 0);
     }
 
@@ -1270,7 +1267,6 @@ void baby()
 
         glTranslated(0 + shipx, 3, 0);
         glTranslated(0, 0, 0);
-        //printf("HI");
         glScalef(0.04, 0.04, 0);
     }
 
@@ -1920,13 +1916,12 @@ void glidder()
     }
     else if (glUp == 1)
     {
-        //printf("Hi|");
         glRotatef(-20, 1, 1, 1);
         glTranslated(-8.5, -6.2, 0);
     }
 
     glScalef(0.05, 0.05, 0);
-    //glRotated(20,1,1,0);
+    
     glPushMatrix(); //  top
     glColor3f(1, 0.27, 0);
     glBegin(GL_POLYGON);
@@ -2085,7 +2080,7 @@ void display(void)
     hillSide();
     field();
     sun();
-    path()
+    path();
     cloudLeft();
     cloudRightUp();
     cloudRight();

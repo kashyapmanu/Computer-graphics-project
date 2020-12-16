@@ -6,12 +6,11 @@
 #define PI 3.1416
 
 int flag = 0;
-
 static GLfloat spin = 0.0;
 
-static float tx = 0.0, bx = 0.0, by = 0.0, isbaby = 0, swing = 0, glUp = 1, angle = 0, step = 0, stepx = 0, stepy = 0, cloudleftx = 0, cloudmiddlex = 0, cloudrightx = 0, cloudrightupx = 0, countSwing = 0;
-static float ty = 5.0;
-
+static float tx = 0.0, bx = 0.0, by = 0.0, isbaby = 0, swing = 0, glUp = 1, angle = 0;
+static float step = 0, stepx = 0, stepy = 0, cloudleftx = 0, cloudmiddlex = 0, cloudrightx = 0, cloudrightupx = 0, countSwing = 0;
+static float ty = 5.0, m = 0;
 static float cloudLeftMove = 0, shipMove = 70, shipx = 0;
 static float xx = 10, yy = 13;
 
@@ -217,9 +216,14 @@ void path()
 
 void person()
 {
+    m += 0.002;
+    if (m > 40)
+    {
+        m = 2;
+    }
     glPushMatrix();
 
-    glTranslated(-7 + i ,-0.5,0);
+    glTranslated(-19 + m ,-1,0);
     glScalef(0.04, 0.06, 0);
     
     glPushMatrix(); 
@@ -386,7 +390,6 @@ void cloudLeft()
     {
         cloudleftx = 40;
     }
-    //printf("%f\n",cloudleftx);
 
     glPushMatrix();
     glTranslated(-20 + cloudleftx, 8.5, 1);
@@ -2081,6 +2084,7 @@ void display(void)
     field();
     sun();
     path();
+    person();
     cloudLeft();
     cloudRightUp();
     cloudRight();

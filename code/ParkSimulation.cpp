@@ -216,7 +216,7 @@ void path()
 
 void person()
 {
-    m += 0.002;
+    m += 0.005;
     if (m > 40)
     {
         m = 2;
@@ -2383,6 +2383,7 @@ void normal_key(unsigned char key, int x, int y)
             isbaby = 0;
             bx = 0;
             by = 0;
+            //shipx=0;
         }
 
     default:

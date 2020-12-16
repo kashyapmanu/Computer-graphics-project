@@ -223,7 +223,7 @@ void person()
     }
     glPushMatrix();
 
-    glTranslated(-19 + m ,-1,0);
+    glTranslated(-21 + m ,-1,0);
     glScalef(0.04, 0.06, 0);
     
     glPushMatrix(); 
@@ -2084,7 +2084,7 @@ void display(void)
     field();
     sun();
     path();
-    person();
+    
     cloudLeft();
     cloudRightUp();
     cloudRight();
@@ -2110,6 +2110,7 @@ void display(void)
         wheerligig();
         swing_();
     }
+    person();
 
     glutPostRedisplay();
     glFlush();
@@ -2382,7 +2383,6 @@ void normal_key(unsigned char key, int x, int y)
             isbaby = 0;
             bx = 0;
             by = 0;
-            //shipx=0;
         }
 
     default:

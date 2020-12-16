@@ -201,17 +201,171 @@ void field()
     glPopMatrix();
 }
 
-void path() //(112,66,20)
+void path() 
 {
 
     glPushMatrix();
-    glColor3f(0.4, 0.8039, 0);
+    glColor3f(0.43, 0.2588, 0.078);
     glBegin(GL_QUADS);
-    glVertex2d(-150.0, 0.0);
-    glVertex2d(150.0, 8.0);
-    glVertex2d(150.0, -50);
-    glVertex2d(-150.0, -50);
+    glVertex2d(-21.0, -2.5);
+    glVertex2d(21.0, -2.5);
+    glVertex2d(21.0, -4.5);
+    glVertex2d(-21.0, -4.5);
     glEnd();
+    glPopMatrix();
+}
+
+void person()
+{
+    glScalef(0.05, 0.05, 0);
+   
+    glPushMatrix(); //  top
+    glColor3f(1, 0.27, 0);
+    glBegin(GL_POLYGON);
+    glVertex2d(-6, -6);
+    glVertex2d(-11, -9);
+    glVertex2d(-9, -13);
+    glVertex2d(-6, -11);
+    glVertex2d(-6, -22);
+    glVertex2d(6, -22);
+    glVertex2d(6, -11);
+    glVertex2d(9, -13);
+    glVertex2d(11, -9);
+    glVertex2d(6, -6);
+    glVertex2d(4, -10);
+    glVertex2d(-4, -10);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //left hand
+    glColor3f(1, 0.94, 0.83);
+    glBegin(GL_QUADS);
+    glVertex2d(-11, -9);
+    glVertex2d(-9, -13);
+    glVertex2d(-13, -20);
+    glVertex2d(-16, -18);
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix(); //left hand palm
+    glTranslated(-15, -20, 0);
+    glColor3f(1, 0.94, 0.83);
+    circle(3, 2.5);
+    glPopMatrix();
+
+    glPushMatrix(); //right hand
+    glColor3f(1, 0.94, 0.83);
+    glBegin(GL_QUADS);
+    glVertex2d(11, -9);
+    glVertex2d(9, -13);
+    glVertex2d(13, -20);
+    glVertex2d(16, -18);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //right hand palm
+    glTranslated(15, -20, 0);
+    glColor3f(1, 0.94, 0.83);
+    circle(3, 2.5);
+    glPopMatrix();
+
+    glPushMatrix(); //skirt
+    glColor3f(0.6, 0.196, 0.8);
+    glBegin(GL_QUADS);
+    glVertex2d(-6, -22);
+    glVertex2d(6, -22);
+    glVertex2d(4, -32);
+    glVertex2d(-16, -30);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //left leg
+    glTranslated(-6, 1.5, 0);
+    glColor3f(1, 0.94, 0.83);
+    glBegin(GL_QUADS);
+    glVertex2d(-6, -32);
+    glVertex2d(-2, -32);
+    glVertex2d(-2, -38);
+    glVertex2d(-6, -38);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //right leg
+    glTranslated(-5, 0.8, 0);
+    glColor3f(1, 0.94, 0.83);
+    glBegin(GL_QUADS);
+    glVertex2d(6, -32);
+    glVertex2d(2, -32);
+    glVertex2d(2, -38);
+    glVertex2d(6, -38);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //right shoe
+    glTranslated(-5, 0.8, 0);
+    glColor3f(0, 0, 0);
+    glBegin(GL_QUADS);
+    glVertex2d(6, -42);
+    glVertex2d(-2, -42);
+    glVertex2d(2, -38);
+    glVertex2d(6, -38);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //left shoe
+    glTranslated(-6, 1.5, 0);
+    glColor3f(0, 0, 0);
+    glBegin(GL_QUADS);
+    glVertex2d(-10, -42);
+    glVertex2d(-2, -42);
+    glVertex2d(-2, -38);
+    glVertex2d(-6, -38);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix(); //hair
+    glColor3f(0, 0, 0);
+    circle(9, 10);
+    glPopMatrix();
+
+    glPushMatrix(); //head, neck, nose ,eye, lips
+    glColor3f(1, 0.94, 0.83);
+    circle(7, 6);      //head
+    glBegin(GL_QUADS); //neck
+    glVertex2d(-6, -6);
+    glVertex2d(6, -6);
+    glVertex2d(4, -10);
+    glVertex2d(-4, -10);
+    glEnd();
+    glPushMatrix();
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES); //right eye
+
+    glVertex2d(4, 3);
+    glVertex2d(1, 3);
+
+    glEnd();
+    glBegin(GL_LINES); //lips
+
+    glVertex2d(2, -3);
+    glVertex2d(-2, -3);
+
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES); //left eye
+
+    glVertex2d(-4, 3);
+    glVertex2d(-1, 3);
+
+    glEnd();
+    circle(0.5, 2); //nose
+    glPopMatrix();
+
+    glPopMatrix();
     glPopMatrix();
 }
 
@@ -573,7 +727,7 @@ void babySwing()
     glPopMatrix();
 }
 
-void swing()
+void swing_()
 {
     glPushMatrix();
     glTranslated(-18, -1.5, 0);
@@ -636,7 +790,6 @@ void swing()
     glPushMatrix(); // swing sitting table
 
     glTranslated(1.8, 3, 1);
-    // glRotated(45,0,1,0);
     glBegin(GL_QUADS);
     glVertex2d(1.0, swing + 1);
     glVertex2d(6.0, swing + 1);
@@ -647,7 +800,6 @@ void swing()
     glPopMatrix();
 
     glPushMatrix(); // swing under extra line
-    //glRotatef(-90,0,0,1);
     glTranslated(1.8, 2.7, 1);
     glBegin(GL_QUADS);
     glVertex2d(0.0, swing);
@@ -656,8 +808,6 @@ void swing()
     glVertex2d(0, swing + 0.1);
     glEnd();
     glPopMatrix();
-
-    //glPopMatrix();
 
     glPopMatrix();
     babySwing();
@@ -735,7 +885,7 @@ void wheerligig()
     glVertex2d(0, -3);
     glEnd();
     glPushMatrix();
-    //glScaled(1.5,1.5,0);
+
     glBegin(GL_QUADS);
     glColor3f(0.545, 0, 0);
     glVertex2d(-1.5, -2.5);
@@ -1935,6 +2085,7 @@ void display(void)
     hillSide();
     field();
     sun();
+    path()
     cloudLeft();
     cloudRightUp();
     cloudRight();
@@ -1946,7 +2097,7 @@ void display(void)
     {
 
         wheerligig();
-        swing();
+        swing_();
     }
     bench();
     if (isbaby == 0 || isbaby == 6 || isbaby == 8)
@@ -1958,7 +2109,7 @@ void display(void)
     if (isbaby == 8)
     {
         wheerligig();
-        swing();
+        swing_();
     }
 
     glutPostRedisplay();
@@ -2100,7 +2251,7 @@ void instructionPage()
 
     glRasterPos3f(15, 18, 0);
 
-    Display_on_screen("Press 'w' to get into the gaintt weel.");
+    Display_on_screen("Press 'w' to get into the giant wheel.");
     glRasterPos3f(15, 16, 0);
 
     Display_on_screen("Press 'r' to sit on the bench and press 's' to stand up.");

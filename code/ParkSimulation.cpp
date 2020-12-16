@@ -9,9 +9,8 @@ int flag = 0;
 static GLfloat spin = 0.0;
 
 static float tx = 0.0, bx = 0.0, by = 0.0, isbaby = 0, swing = 0, glUp = 1, angle = 0;
-static float step = 0, stepx = 0, stepy = 0, cloudleftx = 0, cloudmiddlex = 0, cloudrightx = 0, cloudrightupx = 0, countSwing = 0;
+static float step = 0, stepx = 0, stepy = 0, cloudLeftMove = 0, cloudleftx = 0, cloudmiddlex = 0, cloudrightx = 0, cloudrightupx = 0, countSwing = 0;
 static float ty = 5.0, m = 0;
-static float cloudLeftMove = 0, shipMove = 70, shipx = 0;
 static float xx = 10, yy = 13;
 
 void baby();
@@ -1265,14 +1264,7 @@ void baby()
         glScalef(0.04, 0.06, 0);
     }
 
-    else if (isbaby == 8)
-    {
-
-        glTranslated(0 + shipx, 3, 0);
-        glTranslated(0, 0, 0);
-        glScalef(0.04, 0.04, 0);
-    }
-
+    
     glPushMatrix(); 
     glColor3f(1, 0, 0);
     glBegin(GL_POLYGON);
@@ -2377,14 +2369,6 @@ void normal_key(unsigned char key, int x, int y)
         glutPostRedisplay();
         break;
 
-    case 'c':
-        if (shipx < 5 && shipx > -5)
-        {
-            isbaby = 0;
-            bx = 0;
-            by = 0;
-            //shipx=0;
-        }
 
     default:
         break;

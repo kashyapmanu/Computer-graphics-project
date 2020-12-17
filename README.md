@@ -4,6 +4,8 @@
 This the the mini project for the class of Computer Graphics of VII semester of NMAMIT.
 Project Repository : https://github.com/kashyapmanu/CG-PROJECT 
 
+Project Report Google Docs : https://docs.google.com/document/d/1vs3bXJ1aQBXBJ64ulSnasoh62J9s1a0oKyKn4eaI-WQ/edit?usp=sharing
+
 <hr>
 
 **Team Members**
@@ -38,162 +40,38 @@ Installing OpenGL on ubuntu and running it through code blocks:
 
 <hr>
 
-**Intro Page** 
-Displaying the project name and the collaborators list.
+Instructions
 
-Code:
-	    
-	#include<GL/glut.h>
+ - Use the arrow keys to move the girl.
+ - Get onto the swing using the 'u' key and get down by using the 'd'.
+ - Get onto the glider by using 'g' and get down by using 'j'. Use 'h' and 'l' to use the glider.
+ - Climb the slide step by step by pressing 'o'.
+ - Get onto the giant weel using 'w'.
+ - Press 'r' to get onto the bench and get off by 's'
 
-    void init()
-    {
-	    glClearColor(0.5,0,0.5,0.5);
 
-	    glMatrixMode(GL_PROJECTION);
+Screen Shots
 
-	    glOrtho(0,50,0,50,0,10);
+![enter image description here](./images/introPage.png)
+<hr>
 
-	}
+![enter image description here](./images/instructionPage.png)
+<hr>
 
-	void Display_on_screen(char *string)
+![enter image description here](./images/scene.png)
+<hr>
 
-	{
-	    while(*string)
-	    {		     
-		    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,*string++);
-	    }
-	}
+![enter image description here](./images/bench.png)
+<hr>
 
-	void display()
-	{
+![enter image description here](./images/slide.png)
+<hr>
 
-	    glClear(GL_COLOR_BUFFER_BIT);
+![enter image description here](./images/swing.png)
+<hr>
 
-	    glColor3f(0.0,1.0,0.0);
+![enter image description here](./images/weel.png)
+<hr>
 
-	    glRasterPos2i(15,40);
-
-
-
-	    glRasterPos3f(19.5,40,0);
-
-	    Display_on_screen("Park Simulation");
-
-
-
-	    glRasterPos3f(12,26,0);
-
-	    Display_on_screen("Manasa V");
-
-
-
-	    glRasterPos3f(21,26,0);
-
-	    Display_on_screen("<-->");
-
-
-
-	    glRasterPos3f(26,26,0);
-
-	    Display_on_screen("4NM17CS099");
-
-
-
-	    glRasterPos3f(12,24,0);
-
-	    Display_on_screen("Manjunath Patkar");
-
-
-
-	    glRasterPos3f(21,24,0);
-
-	    Display_on_screen("<-->");
-
-
-
-	    glRasterPos3f(26,24,0);
-
-	    Display_on_screen("4NM17CS100");
-
-
-
-	    glRasterPos3f(12,22,0);
-
-	    Display_on_screen("Manukashyap U V");
-
-
-
-	    glRasterPos3f(21,22,0);
-
-	    Display_on_screen("<-->");
-
-
-
-	    glRasterPos3f(26,22,0);
-
-	    Display_on_screen("4NM17CS101");
-
-
-
-	    glRasterPos3f(12,20,0);
-
-	    Display_on_screen("Marlon Fernandes");
-
-
-
-	    glRasterPos3f(21,20,0);
-
-	    Display_on_screen("<-->");
-
-
-
-	    glRasterPos3f(26,20,0);
-
-	    Display_on_screen("4NM17CS102");
-
-
-
-	    glColor3f(1.0,0.0,0.0);
-
-	    glLineWidth(5);
-
-	    glBegin(GL_LINES);
-
-	    glVertex2i(16,39);
-
-	    glVertex2i(28,39);
-
-	    glEnd();
-
-	    glFlush();
-
-	}
-
-
-
-	int main(int argc, char **argv)
-	{
-
-	    glutInit(&argc,argv);
-
-	    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-
-	    glutInitWindowPosition(1,1);
-
-	    glutInitWindowSize(1400, 950);
-
-	    glutCreateWindow("PROJECT");
-
-	    init();
-
-	    glutDisplayFunc(display);
-
-	    glutMainLoop();
-
-	}
-
-Result:
-
-
-
-![Intropage Output](./images/introPage.png)
+![enter image description here](./images/glider.png)
+<hr>

@@ -1,12 +1,6 @@
 
 # CG PROJECT
 
-This the the mini project for the class of Computer Graphics of VII semester of NMAMIT.
-Project Repository : https://github.com/kashyapmanu/CG-PROJECT 
-
-Project Report Google Docs : https://docs.google.com/document/d/1vs3bXJ1aQBXBJ64ulSnasoh62J9s1a0oKyKn4eaI-WQ/edit?usp=sharing
-
-<hr>
 
 **Team Members**
 
